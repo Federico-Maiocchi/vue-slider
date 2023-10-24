@@ -5,8 +5,8 @@ createApp ({
     data() {
         // oggetto
         return {
-
-            images: [
+            currentIndex: 0,
+            games: [
                 {
                     image: 'img/01.webp',
                     title: "Marvel's Spiderman Miles Morale",
@@ -33,18 +33,37 @@ createApp ({
                     text: "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.",
                 },
             ],
-            
         }
     },
-
-    
+  
     methods: {
+        
+        // decremento
+        prevClick() {
+            this.currentIndex--;
+
+            if(this.currentIndex === -1) {
+                this.currentIndex = this.games.length -1;
+            }
+
+        },
+
+        // incremento
+        nextClick() {
+            this.currentIndex++;
+
+            if(this.currentIndex === this.games.length) {
+
+                this.currentIndex = 0;
+            }
+        },
     },
 
     // usiamo il console log per vedere se è connesso il nostro Vue
-    mounted() {
-        // console.log('funziona?', 'si');
-    }
+    // mounted() {
+    //     // console.log('funziona?', 'si');
+    //     // console.log(this.games);
+    // }
 
     
 
