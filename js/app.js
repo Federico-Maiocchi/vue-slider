@@ -63,14 +63,18 @@ createApp ({
 
             this.currentIndex = index;
         
-        }
+        },
+
+        
     },
 
     // usiamo il console log per vedere se è connesso il nostro Vue
-    // mounted() {
-    //     // console.log('funziona?', 'si');
-    //     // console.log(this.games);
-    // }
+    mounted() {
+        setInterval (this.nextClick, 3000);
+        // setInterval (this.prevClick, 3000);
+        // console.log('funziona?', 'si');
+        // console.log(this.games);
+    }
 
     
 
