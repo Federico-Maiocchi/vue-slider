@@ -57,6 +57,13 @@ createApp ({
                 this.currentIndex = 0;
             }
         },
+
+        // click Thumb
+        onClickThumbs(index) {
+
+            this.currentIndex = index;
+        
+        }
     },
 
     // usiamo il console log per vedere se è connesso il nostro Vue

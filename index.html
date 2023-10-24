@@ -30,8 +30,8 @@
                 <div class="thumbs">
                     <div class="prev" @click="prevClick()"></div>
                     <div class="next" @click="nextClick()"></div>
-                    <div class="thumb" v-for="(item, index) in games" >
-                        <img :src="item.image" alt="Spiderman"/>
+                    <div class="thumb" :class="currentIndex === index ? 'active' : '' " v-for="(item, index) in games" @click="onClickThumbs(index)" >
+                        <img :src="item.image"  alt="Spiderman"/>
                     </div>
                     <!-- <div class="thumb">
                         <img src="games[currentIndex].image" alt="Ratchet & Clank" />
@@ -46,10 +46,8 @@
                         <img src="img/05.webp" alt="Avengers" />
                     </div> -->
                 </div>
-
             </div>
         </div>
-
     </div>
 
     
